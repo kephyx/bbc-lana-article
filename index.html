@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lana Del Rey Never Existed, Leak Reveals AI Behind Global Pop Icon - BBC News</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: ReithSans, Helvetica, Arial, sans-serif;
+            background-color: #ffffff;
+            color: #141414;
+            line-height: 1.5;
+        }
+
+        /* BBC Header */
+        .bbc-header {
+            background-color: #000000;
+            padding: 8px 0;
+        }
+
+        .bbc-header-content {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 16px;
+        }
+
+        .bbc-logo {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .bbc-logo-text {
+            background-color: #ffffff;
+            color: #000000;
+            font-weight: bold;
+            padding: 4px 8px;
+            font-size: 20px;
+            letter-spacing: -1px;
+        }
+
+        .watch-live {
+            background-color: #e60000;
+            color: #ffffff;
+            padding: 6px 12px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 2px;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .subscribe-btn {
+            background-color: #1976d2;
+            color: #ffffff;
+            padding: 8px 16px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+
+        .sign-in {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 14px;
+            padding: 8px 16px;
+            border: 1px solid #ffffff;
+            border-radius: 4px;
+        }
+
+        /* Navigation */
+        .bbc-nav {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e6e6e6;
+            padding: 0;
+        }
+
+        .nav-content {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+
+        .main-nav {
+            display: flex;
+            gap: 0;
+            overflow-x: auto;
+        }
+
+        .nav-item {
+            padding: 12px 16px;
+            text-decoration: none;
+            color: #141414;
+            font-size: 14px;
+            font-weight: bold;
+            white-space: nowrap;
+            border-bottom: 3px solid transparent;
+            transition: all 0.2s;
+        }
+
+        .nav-item:hover {
+            background-color: #f5f5f5;
+        }
+
+        .nav-item.active {
+            border-bottom-color: #e60000;
+        }
+
+        .sub-nav {
+            display: flex;
+            gap: 0;
+            overflow-x: auto;
+            border-top: 1px solid #e6e6e6;
+            padding: 8px 0;
+        }
+
+        .sub-nav-item {
+            padding: 8px 16px;
+            text-decoration: none;
+            color: #666666;
+            font-size: 13px;
+            white-space: nowrap;
+        }
+
+        .sub-nav-item:hover {
+            color: #141414;
+        }
+
+        /* Article Container */
+        .article-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 24px 16px;
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 32px;
+        }
+
+        /* Article Content */
+        .article-content {
+            max-width: 800px;
+        }
+
+        .article-header h1 {
+            font-size: 40px;
+            line-height: 1.1;
+            font-weight: bold;
+            color: #141414;
+            margin-bottom: 16px;
+        }
+
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 24px;
+            font-size: 14px;
+            color: #666666;
+        }
+
+        .article-actions {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .action-btn {
+            padding: 8px 16px;
+            border: 1px solid #e6e6e6;
+            background-color: #ffffff;
+            color: #141414;
+            text-decoration: none;
+            font-size: 14px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .action-btn:hover {
+            background-color: #f5f5f5;
+        }
+
+        .byline {
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #e6e6e6;
+        }
+
+        .byline-author {
+            font-weight: bold;
+            color: #141414;
+            margin-bottom: 4px;
+        }
+
+        .byline-role {
+            color: #666666;
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+
+        .byline-location {
+            color: #666666;
+            font-size: 14px;
+        }
+
+        /* Article Images */
+        .article-image {
+            width: 100%;
+            margin: 24px 0;
+        }
+
+        .article-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .image-caption {
+            font-size: 14px;
+            color: #666666;
+            margin-top: 8px;
+            font-style: italic;
+        }
+
+        .hero-image {
+            margin-bottom: 32px;
+        }
+
+        /* Article Text */
+        .article-text p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #141414;
+        }
+
+        .article-text p:first-of-type {
+            font-weight: bold;
+        }
+
+        .article-text blockquote {
+            border-left: 4px solid #e60000;
+            padding-left: 20px;
+            margin: 24px 0;
+            font-style: italic;
+            color: #666666;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            background-color: #f8f8f8;
+            padding: 24px;
+            height: fit-content;
+        }
+
+        .sidebar h3 {
+            font-size: 20px;
+            margin-bottom: 16px;
+            color: #141414;
+        }
+
+        .related-story {
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #e6e6e6;
+        }
+
+        .related-story:last-child {
+            border-bottom: none;
+        }
+
+        .related-story a {
+            color: #141414;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 1.3;
+        }
+
+        .related-story a:hover {
+            text-decoration: underline;
+        }
+
+        .related-meta {
+            font-size: 14px;
+            color: #666666;
+            margin-top: 8px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .article-container {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .article-header h1 {
+                font-size: 28px;
+            }
+
+            .article-text p {
+                font-size: 16px;
+            }
+
+            .main-nav {
+                padding: 0 8px;
+            }
+
+            .nav-item {
+                padding: 12px 8px;
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- BBC Header -->
+    <header class="bbc-header">
+        <div class="bbc-header-content">
+            <div class="bbc-logo">
+                <div class="bbc-logo-text">BBC</div>
+                <a href="#" class="watch-live">Watch Live</a>
+            </div>
+            <div class="header-actions">
+                <a href="#" class="subscribe-btn">Subscribe</a>
+                <a href="#" class="sign-in">Sign In</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="bbc-nav">
+        <div class="nav-content">
+            <div class="main-nav">
+                <a href="#" class="nav-item">Home</a>
+                <a href="#" class="nav-item active">News</a>
+                <a href="#" class="nav-item">Sport</a>
+                <a href="#" class="nav-item">Business</a>
+                <a href="#" class="nav-item">Innovation</a>
+                <a href="#" class="nav-item">Culture</a>
+                <a href="#" class="nav-item">Arts</a>
+                <a href="#" class="nav-item">Travel</a>
+                <a href="#" class="nav-item">Earth</a>
+                <a href="#" class="nav-item">Audio</a>
+                <a href="#" class="nav-item">Video</a>
+                <a href="#" class="nav-item">Live</a>
+            </div>
+            <div class="sub-nav">
+                <a href="#" class="sub-nav-item">Israel-Gaza War</a>
+                <a href="#" class="sub-nav-item">War in Ukraine</a>
+                <a href="#" class="sub-nav-item">US & Canada</a>
+                <a href="#" class="sub-nav-item">UK</a>
+                <a href="#" class="sub-nav-item">Africa</a>
+                <a href="#" class="sub-nav-item">Asia</a>
+                <a href="#" class="sub-nav-item">Australia</a>
+                <a href="#" class="sub-nav-item">Europe</a>
+                <a href="#" class="sub-nav-item">Latin America</a>
+                <a href="#" class="sub-nav-item">Middle East</a>
+                <a href="#" class="sub-nav-item">In Pictures</a>
+                <a href="#" class="sub-nav-item">BBC InDepth</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article Container -->
+    <div class="article-container">
+        <!-- Main Article Content -->
+        <main class="article-content">
+            <div class="article-header">
+                <h1>Lana Del Rey Never Existed, Leak Reveals AI Behind Global Pop Icon</h1>
+            </div>
+
+            <div class="article-meta">
+                <span>2 July 2025</span>
+                <span>Entertainment & Arts</span>
+            </div>
+
+            <div class="article-actions">
+                <button class="action-btn">Share</button>
+                <button class="action-btn">Save</button>
+            </div>
+
+            <div class="byline">
+                <div class="byline-author">Sarah McMillan</div>
+                <div class="byline-role">BBC Culture Correspondent</div>
+            </div>
+
+            <!-- Hero Image -->
+            <div class="article-image hero-image">
+                <img src="images/lana-portrait.jpg" alt="Lana Del Rey portrait">
+                <div class="image-caption">The mysterious pop icon may have been entirely AI-generated according to leaked documents</div>
+            </div>
+
+            <div class="article-text">
+                <p>In a revelation that has stunned fans worldwide, leaked internal documents from a defunct AI research firm suggest that "Lana Del Rey" — the mysterious and melancholic pop icon — may never have been a real person.</p>
+
+                <p>The documents, obtained by a whistleblower and verified by several independent AI researchers, describe a covert project called LANA (Large-scale Audio-Neural Architecture), launched in 2008 by a coalition of music executives and Silicon Valley developers.</p>
+
+                <div class="article-image">
+                    <img src="images/ai-concept.jpg" alt="Artificial Intelligence concept">
+                    <div class="image-caption">The LANA project allegedly used advanced AI to create an entirely artificial artist</div>
+                </div>
+
+                <p>According to the leak, the project used early generative AI models to create an entirely artificial artist — complete with a voice model, generated lyrics, social media presence, and even deepfake performances. Her debut album Born to Die, which critics praised for its haunting vintage aesthetic and cinematic sound, was allegedly the first commercial product fully generated by the AI.</p>
+
+                <div class="article-image">
+                    <img src="images/born-to-die-album.png" alt="Born to Die album cover">
+                    <div class="image-caption">The "Born to Die" album cover - allegedly the first fully AI-generated commercial music release</div>
+                </div>
+
+                <blockquote>
+                    "Lana was our proof of concept. An AI capable of writing, singing, and emoting better than most humans — and nobody noticed."
+                </blockquote>
+
+                <p>Despite the shocking nature of the claims, BBC has reached out to Interscope Records and representatives for "Lana Del Rey" — none have responded.</p>
+
+                <div class="article-image">
+                    <img src="images/lana-performing.jpg" alt="Lana Del Rey performing live">
+                    <div class="image-caption">Live performances may have used sophisticated deepfake technology, according to the leaked documents</div>
+                </div>
+
+                <p>Fans are divided. Some claim this only deepens their appreciation of the artistry. Others feel betrayed.</p>
+
+                <blockquote>
+                    "This changes everything. I thought she was real. I cried to her music. Was it all an illusion?"
+                </blockquote>
+
+                <div class="article-image">
+                    <img src="images/neural-network.jpg" alt="Neural network visualization">
+                    <div class="image-caption">The neural network architecture behind the LANA project, as described in the leaked documents</div>
+                </div>
+
+                <p>The AI responsible for Lana, codenamed LDR-V4, was reportedly shut down in 2023 after internal disagreements over ethics and transparency.</p>
+
+                <p><strong>More to follow.</strong></p>
+            </div>
+        </main>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h3>Related Stories</h3>
+            
+            <div class="related-story">
+                <a href="#">AI in Music: The Future of Creative Industries</a>
+                <div class="related-meta">Technology • 1 day ago</div>
+            </div>
+
+            <div class="related-story">
+                <a href="#">Deepfake Technology Raises Questions About Authenticity</a>
+                <div class="related-meta">Technology • 3 days ago</div>
+            </div>
+
+            <div class="related-story">
+                <a href="#">Music Industry Grapples with AI-Generated Content</a>
+                <div class="related-meta">Entertainment • 1 week ago</div>
+            </div>
+
+            <div class="related-story">
+                <a href="#">The Ethics of Artificial Artists in Popular Culture</a>
+                <div class="related-meta">Culture • 2 weeks ago</div>
+            </div>
+        </aside>
+    </div>
+</body>
+</html>
+
